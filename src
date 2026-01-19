@@ -1,1 +1,18 @@
-
+src/
+  arch/
+    spec.py        # ArchitectureSpec, G_move/G_int, params
+    constraints.py # Constraint classes
+  circuit/
+    ir.py          # Gate, CircuitIR
+    schedule.py    # layering
+  compile/
+    placer.py      # initial placement + layer placement (v0->IDS)
+    router.py      # shuttle routing (v0串行->并行->MAPF)
+    compiler.py    # pipeline glue
+  metrics/
+    metrics.py     # shuttle/time/depth/logESP etc
+  search/
+    arch_search.py # outer-loop DSE + Pareto
+  viz/
+    plot.py
+tests/
